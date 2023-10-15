@@ -59,7 +59,7 @@ public class TaskController {
         var task = this.taskRepository.findById(id).orElse(null);
 
         if(task == null) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Tarefa não sla encontrada.");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Tarefa não encontrada.");
         }
 
         var idUser = request.getAttribute("idUsers");
